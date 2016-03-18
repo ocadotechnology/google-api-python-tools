@@ -1,4 +1,6 @@
 language: python
-script: make lint test-all
+script: make lint test-all coverage
+after_success:
+  coveralls
 notifications:
   email: false

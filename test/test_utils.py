@@ -59,8 +59,7 @@ with mock.patch('time.sleep'):
 
             self.mocked_object.some_method.side_effect = [error(404), error(404), error(404), "OK"]
 
-            with self.assertRaisesRegexp(GCEApiException, '404'):
-                tester()
+            self.assertRaises(GCEApiException, tester)
 
         def test_raises_exception_immediately_if_not_expected(self):
             @retry_on('404')
@@ -69,8 +68,7 @@ with mock.patch('time.sleep'):
 
             self.mocked_object.some_method.side_effect = Exception('unexpected')
 
-            with self.assertRaisesRegexp(Exception, 'unexpected'):
-                tester()
+            self.assertRaises(Exception, tester)
 
         def test_combination_of_retries(self):
             @retry_on('503')
@@ -100,8 +98,7 @@ with mock.patch('time.sleep'):
 
             self.mocked_object.some_method.side_effect = [Exception('msg'), TopException(), SomeDifferentException()]
 
-            with self.assertRaises(SomeDifferentException):
-                tester()
+            self.assertRaises(SomeDifferentException, tester)
 
         def test_retries_on_expected_exception(self):
             @retry_on(expected_classes=TopException)
@@ -110,5 +107,4 @@ with mock.patch('time.sleep'):
 
             self.mocked_object.some_method.side_effect = [DerivedException(), SomeDifferentException()]
 
-            with self.assertRaises(SomeDifferentException):
-                tester()
+            self.assertRaises(SomeDifferentException, tester)

@@ -11,7 +11,7 @@ if __name__ == '__main__':
           keywords=['dataproc', 'python'],
           packages=['google_api_python_tools'],
           include_package_data=True,
-          install_requires=['python-dateutil', 'oauth2client==1.5.2', 'apiclient'],
+          install_requires=['python-dateutil', 'oauth2client==1.5.2', 'google-api-python-client==1.3.1'],
           tests_require=['nose', 'mock'],
           test_suite="nose.collector",
           author=google_api_python_tools.__author__,

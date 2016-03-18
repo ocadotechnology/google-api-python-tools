@@ -1,0 +1,4 @@
+language: python
+script: make lint test-all
+notifications:
+  email: false

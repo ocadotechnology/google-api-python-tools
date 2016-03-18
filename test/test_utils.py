@@ -3,7 +3,7 @@ import mock
 with mock.patch('time.sleep'):
     import unittest
 
-    from googleapiclient.errors import HttpError
+    from apiclient import errors
     from httplib2 import Response
 
     from google_api_python_tools.google_connectors.gceapiexception import GCEApiException
@@ -17,7 +17,7 @@ with mock.patch('time.sleep'):
             pass
 
     def error(x):
-        return GCEApiException(HttpError(Response({'status': x}), ""))
+        return GCEApiException(errors.HttpError(Response({'status': x}), ""))
 
     class TopException(Exception):
         pass

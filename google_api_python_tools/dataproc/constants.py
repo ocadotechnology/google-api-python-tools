@@ -96,7 +96,7 @@ class ComputeEngineMachineType(Constant):
     def get_all(cls):
         all_types = []
         for basic_type in cls.basic_types.keys():
-            all_types += ['n1-%s-%s' % (basic_type, 2 ** i) for i in xrange(1, 6)]
+            all_types += ['n1-%s-%s' % (basic_type, 2 ** i) for i in range(1, 6)]
         return all_types
 
 

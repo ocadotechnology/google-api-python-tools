@@ -15,10 +15,10 @@ class TestDataProcConstants(unittest.TestCase):
 
     def test_has_all_available_machine_types(self):
         all_types = ComputeEngineMachineType.get_all()
-        self.assertIn('n1-highmem-16', all_types)
-        self.assertIn('n1-standard-2', all_types)
-        self.assertIn('n1-highcpu-8', all_types)
-        self.assertIn('n1-standard-32', all_types)
+        self.assertTrue('n1-highmem-16' in all_types)
+        self.assertTrue('n1-standard-2' in all_types)
+        self.assertTrue('n1-highcpu-8' in all_types)
+        self.assertTrue('n1-standard-32' in all_types)
 
     def test_newest_image_is_listed_first(self):
         self.assertEqual(DataprocImageVersion.get_all()[0], DataprocImageVersion.V_1_0)

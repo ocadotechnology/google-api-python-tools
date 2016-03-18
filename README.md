@@ -1,1 +1,0 @@
-# Google Api Python Tools [![Build Status](https://travis-ci.org/ocadotechnology/google-api-python-tools.svg?branch=master)](https://travis-ci.org/ocadotechnology/google-api-python-tools)

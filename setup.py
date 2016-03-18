@@ -1,21 +1,20 @@
-from setuptools import find_packages
 from setuptools import setup
 
-import dataproc
+import google_api_python_tools
 
 if __name__ == '__main__':
-    setup(name='DataProc-Python',
-          description='Python client for Google DataProc.',
-          url='https://github.com/ocadotechnology/dataproc-python',
-          version=dataproc.__version__,
+    setup(name='google-api-python-tools',
+          description='Set of tools for Google services like DataProc.',
+          url='https://github.com/ocadotechnology/google-api-python-tools.git',
+          version=google_api_python_tools.__version__,
           license='Apache',
           keywords=['dataproc', 'python'],
-          packages=find_packages(),
+          packages=['google_api_python_tools'],
           include_package_data=True,
-          install_requires=['python-dateutil'],
-          tests_require=['nose'],
+          install_requires=['python-dateutil', 'oauth2client==1.5.2', 'apiclient'],
+          tests_require=['nose', 'mock'],
           test_suite="nose.collector",
-          author=dataproc.__author__,
+          author=google_api_python_tools.__author__,
           classifiers=[
               'Intended Audience :: Developers',
               'Operating System :: OS Independent',

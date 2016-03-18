@@ -1,6 +1,7 @@
-from dataproc.constants import DataprocImageVersion
-from dataproc.job import DataProcJob
-from dataproc.operation import DataProcOperation
+from google_api_python_tools.dataproc.job import DataProcJob
+from google_api_python_tools.dataproc.operation import DataProcOperation
+
+from google_api_python_tools.dataproc.constants import DataprocImageVersion
 
 
 class DataProcCluster(object):

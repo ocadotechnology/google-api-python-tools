@@ -1,6 +1,7 @@
-from api_requests.client import ApiClient
-from api_requests.connector import Connector
-from dataproc.cluster import DataProcCluster
+from google_api_python_tools.google_connectors.client import ApiClient
+
+from google_api_python_tools.dataproc.cluster import DataProcCluster
+from google_api_python_tools.google_connectors.connector import Connector
 
 
 class DataProcClient(ApiClient):

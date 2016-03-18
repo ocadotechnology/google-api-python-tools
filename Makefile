@@ -37,7 +37,7 @@ clean-test:
 	rm -fr htmlcov/
 
 lint: prepare-dev
-	flake8 dataproc
+	flake8 google_api_python_tools
 
 test:
 	python setup.py test
@@ -46,7 +46,7 @@ test-all: prepare-dev
 	tox
 
 coverage: prepare-dev
-	coverage run --source dataproc setup.py test
+	coverage run --source google_api_python_tools setup.py test
 	coverage report -m
 	coverage html
 

@@ -1,6 +1,6 @@
 import unittest
 
-from dataproc.constants import ComputeEngineMachineType, DataprocImageVersion
+from google_api_python_tools.dataproc.constants import ComputeEngineMachineType, DataprocImageVersion
 
 
 class TestDataProcConstants(unittest.TestCase):
